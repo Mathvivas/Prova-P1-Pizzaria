@@ -1,8 +1,13 @@
 package br.maua.Classes;
 
+import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Sistema {
+    Usuario usuario;
+    Scanner scan = new Scanner(System.in);
+    private ArrayList<Pedido> pedidos;
 
     public void run() {
         System.out.println("| ____________ | Pizzaria o Rato que Ri | ____________ |");
@@ -14,8 +19,6 @@ public class Sistema {
 
         // __________________________________________________________________________________________________________________ //
 
-        Usuario usuario;
-        Scanner scan = new Scanner(System.in);
         int resp;
 
         do {
@@ -29,10 +32,19 @@ public class Sistema {
                     String senha = scan.next();
 
                     if (usuario.getSenha().equals(senha)) {
-
+                        String id = geradorID();
                     }
             }
 
         } while (resp != 0);
+    }
+
+
+    private String geradorID() {
+        Random random = new Random();
+        String IDGerado = "";
+        for (int i = 0; i < 3; i++)
+            IDGerado += random.nextInt(10);
+        return IDGerado;
     }
 }

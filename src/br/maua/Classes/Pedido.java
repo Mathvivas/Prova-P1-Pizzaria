@@ -3,8 +3,6 @@ package br.maua.Classes;
 import br.maua.Enumeracoes.Estado;
 import br.maua.Enumeracoes.FormaDePagamento;
 
-import java.util.Random;
-
 public class Pedido {
     private String ID;
     private String descricao;
@@ -19,13 +17,5 @@ public class Pedido {
         this.valor = valor;
         this.formaDePagamento = formaDePagamento;
         this.estado = estado;
-    }
-
-    private String geradorID() {
-        Random random = new Random();
-        String IDGerado = "";
-        for (int i = 0; i < 3; i++)
-            IDGerado += random.nextInt(10);
-        return IDGerado;
     }
 }
