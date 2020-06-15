@@ -12,5 +12,8 @@ public class Usuario {
         this.senha = senha;
     }
 
+    public String getSenha() {
+        return senha;
+    }
 
 }
