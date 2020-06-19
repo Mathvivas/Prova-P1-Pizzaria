@@ -18,4 +18,35 @@ public class Pedido {
         this.formaDePagamento = formaDePagamento;
         this.estado = estado;
     }
+
+    @Override
+    public String toString() {
+        return "\nPedido {" +
+                "ID: " + getID() +
+                "| Descrição: " + getDescricao() +
+                "| Valor: " + getValor() +
+                "| Pagamento: " + getFormaDePagamento() +
+                "| Estado: " + getEstado() +
+                "}";
+    }
+
+    public String getID() {
+        return ID;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public FormaDePagamento getFormaDePagamento() {
+        return formaDePagamento;
+    }
+
+    public Estado getEstado() {
+        return estado;
+    }
 }

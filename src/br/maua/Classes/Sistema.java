@@ -66,9 +66,16 @@ public class Sistema {
                                 pedidos.add(new Pedido(id, descricao, valor, FormaDePagamento.VALE_REFEICAO, Estado.REALIZADO));
                                 break;
                         }
-
                         break;
                     }
+                case 2:
+                    if (pedidos.isEmpty())
+                        System.out.println("\nNenhum pedido foi registrado!");
+                    else {
+                        System.out.println("\n| ____________ | Lista de Pedidos | ____________ |");
+                        pedidos.forEach((Pedido) -> System.out.println(Pedido));
+                    }
+                    break;
             }
 
         } while (resp != 0);
