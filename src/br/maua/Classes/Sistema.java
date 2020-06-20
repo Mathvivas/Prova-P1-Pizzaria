@@ -91,10 +91,20 @@ public class Sistema {
 
                             switch(est) {
                                 case 1:
-                                    
+                                    pedidos.get(i).setEstado(Estado.PREPARACAO);
+                                    break;
+                                case 2:
+                                    pedidos.get(i).setEstado(Estado.SAIU_PARA_ENTREGA);
+                                    break;
+                                case 3:
+                                    pedidos.get(i).setEstado(Estado.ENTREGUE);
+                                    break;
+                                case 4:
+                                    pedidos.get(i).setEstado(Estado.DEVOLVIDO);
                             }
-
                         }
+                        else
+                            System.out.println("ID digitado não existe...");
                     }
                     break;
                 case 0:
