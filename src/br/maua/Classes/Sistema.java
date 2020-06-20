@@ -76,6 +76,29 @@ public class Sistema {
                         pedidos.forEach((Pedido) -> System.out.println(Pedido));
                     }
                     break;
+                case 3:
+                    System.out.println("\n|--- Alterar Pedidos ---|");
+                    System.out.println("\nDigite o ID do pedido que deseja modificar: ");
+                    String id = scan.next();
+                    for (int i = 0; i < pedidos.size(); i++) {
+                        if (pedidos.get(i).getID().equals(id)) {
+                            System.out.println("\n1 - Preparação");
+                            System.out.println("2 - Saiu para entrega");
+                            System.out.println("3 - Entregue");
+                            System.out.println("4 - Devolvido");
+                            System.out.println("\nDigite o novo estado do pedido: ");
+                            int est = scan.nextInt();
+
+                            switch(est) {
+                                case 1:
+                                    
+                            }
+
+                        }
+                    }
+                    break;
+                case 0:
+                    break;
             }
 
         } while (resp != 0);
