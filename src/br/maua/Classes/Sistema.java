@@ -8,9 +8,9 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Sistema {
-    Usuario usuario;
+    Usuario usuario = new Usuario("Matheus", "email@hotmail.com", "123456");
     Scanner scan = new Scanner(System.in);
-    private ArrayList<Pedido> pedidos;
+    public ArrayList<Pedido> pedidos;
 
     public void run() {
         System.out.println("| ____________ | Pizzaria o Rato que Ri | ____________ |");
