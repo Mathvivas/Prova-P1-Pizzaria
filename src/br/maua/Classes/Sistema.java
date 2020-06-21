@@ -38,8 +38,8 @@ public class Sistema {
 
                     if (usuario.getSenha().equals(senha)) {
                         String id = geradorID();
-                        System.out.println("Digite a descrição do pedido: ");
-                        String descricao = scan.next();
+                        System.out.println("Digite o tipo da pizza: ");
+                        String tipoPizza = scan.next();
                         System.out.println("Digite o valor do pedido: ");
                         double valor = scan.nextDouble();
 
@@ -49,26 +49,26 @@ public class Sistema {
                         System.out.println("| 3 - Crédito");
                         System.out.println("| 4 - Vale Alimentação");
                         System.out.println("| 5 - Vale Refeição");
-                        System.out.println("|__________________________________________|");
+                        System.out.println("|________________________________________|");
 
                         System.out.println("\nDigite a forma de pagamento: ");
                         int pag = scan.nextInt();
 
                         switch(pag) {
                             case 1:
-                                pedidos.add(new Pedido(id, descricao, valor, FormaDePagamento.DINHEIRO, Estado.REALIZADO));
+                                pedidos.add(new Pedido(id, tipoPizza, valor, FormaDePagamento.DINHEIRO, Estado.REALIZADO));
                                 break;
                             case 2:
-                                pedidos.add(new Pedido(id, descricao, valor, FormaDePagamento.DEBITO, Estado.REALIZADO));
+                                pedidos.add(new Pedido(id, tipoPizza, valor, FormaDePagamento.DEBITO, Estado.REALIZADO));
                                 break;
                             case 3:
-                                pedidos.add(new Pedido(id, descricao, valor, FormaDePagamento.CREDITO, Estado.REALIZADO));
+                                pedidos.add(new Pedido(id, tipoPizza, valor, FormaDePagamento.CREDITO, Estado.REALIZADO));
                                 break;
                             case 4:
-                                pedidos.add(new Pedido(id, descricao, valor, FormaDePagamento.VALE_ALIMENTACAO, Estado.REALIZADO));
+                                pedidos.add(new Pedido(id, tipoPizza, valor, FormaDePagamento.VALE_ALIMENTACAO, Estado.REALIZADO));
                                 break;
                             case 5:
-                                pedidos.add(new Pedido(id, descricao, valor, FormaDePagamento.VALE_REFEICAO, Estado.REALIZADO));
+                                pedidos.add(new Pedido(id, tipoPizza, valor, FormaDePagamento.VALE_REFEICAO, Estado.REALIZADO));
                                 break;
                         }
                         break;

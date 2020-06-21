@@ -5,15 +5,15 @@ import br.maua.Enumeracoes.FormaDePagamento;
 
 public class Pedido {
     private String ID;
-    private String descricao;
+    private String tipoPizza;
     private double valor;
     private FormaDePagamento formaDePagamento;
     private Estado estado;
 
     // Construtor
-    public Pedido(String ID, String descricao, double valor, FormaDePagamento formaDePagamento, Estado estado) {
+    public Pedido(String ID, String tipoPizza, double valor, FormaDePagamento formaDePagamento, Estado estado) {
         this.ID = ID;
-        this.descricao = descricao;
+        this.tipoPizza = tipoPizza;
         this.valor = valor;
         this.formaDePagamento = formaDePagamento;
         this.estado = estado;
@@ -23,10 +23,10 @@ public class Pedido {
     public String toString() {
         return "\nPedido {" +
                 "ID: " + getID() +
-                "| Descrição: " + getDescricao() +
-                "| Valor: " + getValor() +
-                "| Pagamento: " + getFormaDePagamento() +
-                "| Estado: " + getEstado() +
+                " | Tipo da Pizza: " + getTipoPizza() +
+                " | Valor: " + getValor() +
+                " | Pagamento: " + getFormaDePagamento() +
+                " | Estado: " + getEstado() +
                 "}";
     }
 
@@ -34,8 +34,8 @@ public class Pedido {
         return ID;
     }
 
-    public String getDescricao() {
-        return descricao;
+    public String getTipoPizza() {
+        return tipoPizza;
     }
 
     public double getValor() {
