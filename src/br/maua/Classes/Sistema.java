@@ -8,11 +8,23 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * Classe que controla todos os pedidos da Pizzaria.
+ * Ela é responsável pelo funcionamento do programa.
+ * É nesta Classe, que todas as outras Classes e Enumerações se encontram.
+ *
+ * @author Matheus Lopes Vivas - mathvivas@hotmail.com
+ * @since 16/06/2020
+ * @version 1.0
+ */
 public class Sistema {
     Usuario usuario = new Usuario("Matheus", "email@hotmail.com", "123456");
     Scanner scan = new Scanner(System.in);
     private List<Pedido> pedidos;
 
+    /**
+     * Método responsável por rodar o programa da Pizzaria.
+     */
     public void run() {
         pedidos = new ArrayList<>();
         int resp;
@@ -120,6 +132,9 @@ public class Sistema {
     }
 
 
+    /**
+     * @return Getter responsável pela geração aleatória do ID.
+     */
     private String geradorID() {
         Random random = new Random();
         String IDGerado = "";
