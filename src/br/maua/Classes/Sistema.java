@@ -4,27 +4,29 @@ import br.maua.Enumeracoes.Estado;
 import br.maua.Enumeracoes.FormaDePagamento;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Sistema {
     Usuario usuario = new Usuario("Matheus", "email@hotmail.com", "123456");
     Scanner scan = new Scanner(System.in);
-    public ArrayList<Pedido> pedidos;
+    private List<Pedido> pedidos;
 
     public void run() {
-        System.out.println("| ____________ | Pizzaria o Rato que Ri | ____________ |");
-        System.out.println("|\t\t1 - Nova Venda                                 |");
-        System.out.println("|\t\t2 - Verificar Pedidos                          |");
-        System.out.println("|\t\t3 - Alterar Pedidos                            |");
-        System.out.println("|\t\t0 - Sair                                       |");
-        System.out.println("|______________________________________________________|");
-
-        // __________________________________________________________________________________________________________________ //
-
+        pedidos = new ArrayList<>();
         int resp;
 
         do {
+            System.out.println("\n\n| ____________ | Pizzaria o Rato que Ri | ____________ |");
+            System.out.println("|\t\t1 - Nova Venda                                 |");
+            System.out.println("|\t\t2 - Verificar Pedidos                          |");
+            System.out.println("|\t\t3 - Alterar Pedidos                            |");
+            System.out.println("|\t\t0 - Sair                                       |");
+            System.out.println("|______________________________________________________|");
+
+        // __________________________________________________________________________________________________________________ //
+
             System.out.println("\nDigite o item desejado: ");
             resp = scan.nextInt();
 
@@ -41,11 +43,14 @@ public class Sistema {
                         System.out.println("Digite o valor do pedido: ");
                         double valor = scan.nextDouble();
 
-                        System.out.println("\n1 - Dinheiro");
-                        System.out.println("2 - Débito");
-                        System.out.println("3 - Crédito");
-                        System.out.println("4 - Vale Alimentação");
-                        System.out.println("5 - Vale Refeição");
+                        System.out.println("\n| _______ | Forma de Pagamento | _______ |");
+                        System.out.println("| 1 - Dinheiro");
+                        System.out.println("| 2 - Débito");
+                        System.out.println("| 3 - Crédito");
+                        System.out.println("| 4 - Vale Alimentação");
+                        System.out.println("| 5 - Vale Refeição");
+                        System.out.println("|__________________________________________|");
+
                         System.out.println("\nDigite a forma de pagamento: ");
                         int pag = scan.nextInt();
 
