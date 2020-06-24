@@ -4,6 +4,7 @@ package br.maua.Classes;
  * Classe concreta que representa o funcionário (usuário).
  *
  * @author Matheus Lopes Vivas - mathvivas@hotmail.com
+ * @RA 17.04401-4
  * @since 16/06/2020
  * @version 1.0
  */

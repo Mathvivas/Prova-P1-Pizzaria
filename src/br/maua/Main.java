@@ -7,6 +7,7 @@ import br.maua.Classes.Sistema;
  * Por meio dela, a aplicação é executada.
  *
  * @author Matheus Lopes Vivas - mathvivas@hotmail.com
+ * @RA 17.04401-4
  * @since 15/06/2020
  * @version 1.0
  */

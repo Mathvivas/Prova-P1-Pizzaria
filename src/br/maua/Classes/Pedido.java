@@ -7,27 +7,28 @@ import br.maua.Enumeracoes.FormaDePagamento;
  * Classe que representa o pedido do cliente da Pizzaria.
  *
  * @author Matheus Lopes Vivas - mathvivas@hotmail.com
+ * @RA 17.04401-4
  * @since 16/06/2020
  * @version 1.0
  */
 public class Pedido {
     private String ID;
-    private String tipoPizza;
+    private String descricao;
     private double valor;
     private FormaDePagamento formaDePagamento;
     private Estado estado;
 
     /**
      * @param ID Gerado randomicamente para cada novo pedido.
-     * @param tipoPizza Tipo da Pizza pedida.
+     * @param descricao Descrição do pedido.
      * @param valor Preço total da Pizza.
      * @param formaDePagamento Enumeração que define o método de pagamento do cliente.
      * @param estado Enumeração que define o estado em que a Pizza se encontra, a partir do pedido.
      */
     // Construtor
-    public Pedido(String ID, String tipoPizza, double valor, FormaDePagamento formaDePagamento, Estado estado) {
+    public Pedido(String ID, String descricao, double valor, FormaDePagamento formaDePagamento, Estado estado) {
         this.ID = ID;
-        this.tipoPizza = tipoPizza;
+        this.descricao = descricao;
         this.valor = valor;
         this.formaDePagamento = formaDePagamento;
         this.estado = estado;
@@ -40,7 +41,7 @@ public class Pedido {
     public String toString() {
         return "\nPedido {" +
                 "ID: " + getID() +
-                " | Tipo da Pizza: " + getTipoPizza() +
+                " | Descrição: " + getDescricao() +
                 " | Valor: " + getValor() +
                 " | Pagamento: " + getFormaDePagamento() +
                 " | Estado: " + getEstado() +
@@ -55,10 +56,10 @@ public class Pedido {
     }
 
     /**
-     * @return Getter para o tipo de pizza.
+     * @return Getter para a descrição do pedido.
      */
-    public String getTipoPizza() {
-        return tipoPizza;
+    public String getDescricao() {
+        return descricao;
     }
 
     /**
